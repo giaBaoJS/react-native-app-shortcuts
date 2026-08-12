@@ -8,6 +8,7 @@ import {
   View,
 } from 'react-native';
 import {
+  addShortcutListener,
   clearShortcuts,
   getInitialShortcut,
   getShortcuts,
@@ -106,7 +107,11 @@ export default function App() {
         appendLog('info', 'Normal launch (no shortcut)');
       }
     });
+    const subscription = addShortcutListener((item) => {
+      appendLog('warm', `Press event: ${formatItem(item)}`);
+    });
     refreshActive();
+    return () => subscription.remove();
   }, [appendLog, refreshActive]);
 
   const onSetShortcuts = useCallback(async () => {
