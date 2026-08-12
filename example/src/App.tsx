@@ -23,7 +23,7 @@ const SAMPLE_SHORTCUTS: ShortcutItem[] = [
     subtitle: 'Start a conversation',
     iconName: Platform.select({
       ios: 'square.and.pencil',
-      android: 'ic_menu_edit',
+      android: 'ic_shortcut_compose',
     }),
     data: { screen: 'compose', source: 'shortcut' },
   },
@@ -32,7 +32,7 @@ const SAMPLE_SHORTCUTS: ShortcutItem[] = [
     title: 'Search',
     iconName: Platform.select({
       ios: 'magnifyingglass',
-      android: 'ic_menu_search',
+      android: 'ic_shortcut_search',
     }),
     data: { screen: 'search' },
   },
@@ -40,7 +40,10 @@ const SAMPLE_SHORTCUTS: ShortcutItem[] = [
     id: 'favorites',
     title: 'Favorites',
     subtitle: 'Your starred items',
-    iconName: Platform.select({ ios: 'star.fill', android: 'ic_menu_star' }),
+    iconName: Platform.select({
+      ios: 'star.fill',
+      android: 'ic_shortcut_star',
+    }),
     data: { screen: 'favorites' },
   },
 ];

@@ -11,6 +11,7 @@
       "react-native-strict-api"
     ],
     "esModuleInterop": true,
+    "types": ["jest"],
     "forceConsistentCasingInFileNames": true,
     "jsx": "react-jsx",
     "lib": ["ESNext"],

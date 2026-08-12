@@ -14,7 +14,12 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/giaBaoJS/react-native-app-shortcuts.git", :tag => "#{s.version}" }
 
   s.source_files = "ios/**/*.{h,m,mm,swift,cpp}"
-  s.private_header_files = "ios/**/*.h"
+  # AppShortcuts.h is the public API host apps import from their AppDelegate
+  # (Swift: `import AppShortcuts`, Objective-C: `#import <AppShortcuts/AppShortcuts.h>`).
+  s.public_header_files = "ios/AppShortcuts.h"
+  s.pod_target_xcconfig = {
+    "DEFINES_MODULE" => "YES",
+  }
 
   install_modules_dependencies(s)
 end
