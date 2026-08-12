@@ -1,5 +1,5 @@
 {
-  "name": "react-native-app-shortcuts",
+  "name": "@giabaojs/react-native-app-shortcuts",
   "version": "0.1.0",
   "description": "Home screen quick actions for React Native, built for the New Architecture: dynamic shortcuts on iOS (UIApplicationShortcutItem) and Android (ShortcutManager)",
   "main": "./lib/module/index.js",

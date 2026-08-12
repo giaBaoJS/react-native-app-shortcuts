@@ -15,7 +15,7 @@ import {
   setShortcuts,
   useShortcutPress,
   type ShortcutItem,
-} from 'react-native-app-shortcuts';
+} from '@giabaojs/react-native-app-shortcuts';
 
 const SAMPLE_SHORTCUTS: ShortcutItem[] = [
   {

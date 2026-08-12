@@ -28,9 +28,9 @@ The popular legacy library (`react-native-quick-actions`) is unmaintained and no
 ## Installation
 
 ```sh
-npm install react-native-app-shortcuts
+npm install @giabaojs/react-native-app-shortcuts
 # or
-yarn add react-native-app-shortcuts
+yarn add @giabaojs/react-native-app-shortcuts
 ```
 
 Then install pods:
@@ -124,7 +124,7 @@ import {
   setShortcuts,
   useShortcutPress,
   type ShortcutItem,
-} from 'react-native-app-shortcuts';
+} from '@giabaojs/react-native-app-shortcuts';
 
 // Register shortcuts (replaces any previously set):
 await setShortcuts([

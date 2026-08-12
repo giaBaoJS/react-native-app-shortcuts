@@ -11,7 +11,7 @@ import {
   shortcutKey,
   SHORTCUT_PRESSED_EVENT,
   type ShortcutItem,
-} from 'react-native-app-shortcuts';
+} from '@giabaojs/react-native-app-shortcuts';
 ```
 
 ## `ShortcutItem`

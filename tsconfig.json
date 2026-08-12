@@ -2,7 +2,7 @@
   "compilerOptions": {
     "rootDir": ".",
     "paths": {
-      "react-native-app-shortcuts": ["./src/index"]
+      "@giabaojs/react-native-app-shortcuts": ["./src/index"]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
