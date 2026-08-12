@@ -3,7 +3,7 @@
 [![CI](https://github.com/giaBaoJS/react-native-app-shortcuts/actions/workflows/ci.yml/badge.svg)](https://github.com/giaBaoJS/react-native-app-shortcuts/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 [![New Architecture](https://img.shields.io/badge/New%20Architecture-supported-blue.svg)](https://reactnative.dev/architecture/landing-page)
-[![npm](https://img.shields.io/npm/v/react-native-app-shortcuts.svg)](https://www.npmjs.com/package/react-native-app-shortcuts)
+[![npm](https://img.shields.io/npm/v/%40giabaojs%2Freact-native-app-shortcuts.svg)](https://www.npmjs.com/package/@giabaojs/react-native-app-shortcuts)
 
 <p align="center"><img src="docs/assets/demo.gif" width="320" alt="App Shortcuts demo — set shortcuts, long-press the app icon, pick a quick action and see the press logged" /></p>
 
