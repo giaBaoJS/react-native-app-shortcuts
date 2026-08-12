@@ -5,6 +5,8 @@
 [![New Architecture](https://img.shields.io/badge/New%20Architecture-supported-blue.svg)](https://reactnative.dev/architecture/landing-page)
 [![npm](https://img.shields.io/npm/v/react-native-app-shortcuts.svg)](https://www.npmjs.com/package/react-native-app-shortcuts)
 
+<p align="center"><img src="docs/assets/demo.gif" width="320" alt="App Shortcuts demo — set shortcuts, long-press the app icon, pick a quick action and see the press logged" /></p>
+
 Home-screen **quick actions** (long-press the app icon) for React Native, built for the **New Architecture**: dynamic shortcuts on iOS (`UIApplicationShortcutItem`) and Android (`ShortcutManager`).
 
 ## Why
