@@ -1,4 +1,4 @@
-import {
+import AppShortcuts, {
   clearShortcuts,
   getInitialShortcut,
   getShortcuts,
@@ -6,6 +6,7 @@ import {
   shortcutKey,
   type ShortcutItem,
 } from '../index';
+import * as namedExports from '../index';
 import NativeAppShortcuts from '../NativeAppShortcuts';
 
 jest.mock('../NativeAppShortcuts', () => ({
@@ -152,5 +153,29 @@ describe('shortcutKey', () => {
     expect(shortcutKey({ id: 'a', title: 'T' })).not.toBe(
       shortcutKey({ id: 'b', title: 'T' })
     );
+  });
+
+  // The key is public API and ends up in logs, Map keys and React keys, so a
+  // stray control character in the separator is a defect callers cannot see.
+  it('contains no control characters', () => {
+    const key = shortcutKey({ id: 'a', title: 'T', data: { x: '1' } });
+
+    expect([...key].filter((char) => char.charCodeAt(0) < 0x20)).toEqual([]);
+    expect(key).toBe('a {"x":"1"}');
+  });
+});
+
+describe('default export', () => {
+  // The README promises every function is reachable both ways, so this is
+  // derived from the module rather than a hand-kept list that can drift.
+  it('carries every function the module exports by name', () => {
+    const functionExports = Object.entries(namedExports)
+      .filter(
+        ([name, value]) => name !== 'default' && typeof value === 'function'
+      )
+      .map(([name]) => name);
+
+    expect(functionExports).toContain('shortcutKey');
+    expect(Object.keys(AppShortcuts).sort()).toEqual(functionExports.sort());
   });
 });
